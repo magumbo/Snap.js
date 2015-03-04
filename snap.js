@@ -439,6 +439,7 @@
                                     (cache.simpleStates.halfway || cache.simpleStates.hyperExtending) // At least halfway open OR hyperextending
                                 ) {
                                     action.translate.easeTo(settings.maxPosition); // Open Left
+                                    utils.dispatchEvent('open'); //Fire open event here
                                 }
                             } else {
                                 action.translate.easeTo(0); // Close Left
@@ -454,6 +455,7 @@
                                     (cache.simpleStates.halfway || cache.simpleStates.hyperExtending) // At least halfway open OR hyperextending
                                 ) {
                                     action.translate.easeTo(settings.minPosition); // Open Right
+                                    utils.dispatchEvent('open'); //Fire open event here
                                 }
                             } else {
                                 action.translate.easeTo(0); // Close Right
